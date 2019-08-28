@@ -6,7 +6,7 @@ metadata:
     type: local
 spec:
   capacity:
-    storage: 4Gi
+    storage: 5Gi
   accessModes:
     - ReadWriteOnce
   hostPath:
@@ -22,7 +22,7 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 4Gi
+      storage: 5Gi
 ---
 
 apiVersion: v1
@@ -51,8 +51,8 @@ metadata:
     app: registry
 spec:
   ports:
-    - port: 8080
-      targetPort: 8080
+    - port: 8081
+      targetPort: 8081
       name: registry
   selector:
     app: registry
